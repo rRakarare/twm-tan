@@ -53,7 +53,6 @@ function RootDocument() {
 			</head>
 			<body>
 				<Navigation />
-				<ToneToggle />
 				<Outlet />
 				<TanStackDevtools
 					config={{

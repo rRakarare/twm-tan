@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { AudioLines } from "../animate-ui/icons/audio-lines";
+import { AnimateIcon } from "../animate-ui/icons/icon";
 import { Button } from "../ui/button";
 
 function ToneToggle() {
@@ -10,10 +12,22 @@ function ToneToggle() {
 
 	switch (i18n.language) {
 		case "ca":
-			return <Button onClick={() => handleChange("fo")}>Set to Formal</Button>;
+			return (
+				<AnimateIcon animateOnHover>
+					<Button onClick={() => handleChange("fo")}>
+						<AudioLines />
+					</Button>
+				</AnimateIcon>
+			);
 
 		default:
-			return <Button onClick={() => handleChange("ca")}>Set to Casual</Button>;
+			return (
+				<AnimateIcon animateOnHover>
+					<Button onClick={() => handleChange("ca")}>
+						<AudioLines />
+					</Button>
+				</AnimateIcon>
+			);
 	}
 }
 
