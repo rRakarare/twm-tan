@@ -3,9 +3,13 @@ import type { QueryClient } from "@tanstack/react-query";
 import {
 	createRootRouteWithContext,
 	HeadContent,
+	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import ToneToggle from "@/components/custom/toneToggle";
+import Navigation from "@/components/navigation";
+import { setSSRLanguage } from "@/lib/i18n";
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
 import appCss from "../styles.css?url";
 
@@ -34,18 +38,23 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 			},
 		],
 	}),
+	beforeLoad: async () => {
+		await setSSRLanguage();
+	},
 
 	shellComponent: RootDocument,
 });
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootDocument() {
 	return (
-		<html lang="en">
+		<html lang="de">
 			<head>
 				<HeadContent />
 			</head>
 			<body>
-				{children}
+				<Navigation />
+				<ToneToggle />
+				<Outlet />
 				<TanStackDevtools
 					config={{
 						position: "bottom-right",
