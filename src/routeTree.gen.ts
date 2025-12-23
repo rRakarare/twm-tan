@@ -9,7 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UeberUnsRouteImport } from './routes/ueber-uns'
+import { Route as PartnerRouteImport } from './routes/partner'
+import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LeistungenWebseitenBrandingRouteImport } from './routes/leistungen/webseiten-branding'
+import { Route as LeistungenSichtbarkeitSteigernRouteImport } from './routes/leistungen/sichtbarkeit-steigern'
+import { Route as LeistungenKiAutomatisierungRouteImport } from './routes/leistungen/ki-automatisierung'
+import { Route as LeistungenDigitaleWerbungRouteImport } from './routes/leistungen/digitale-werbung'
 import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-query'
 import { Route as DemoStartServerFuncsRouteImport } from './routes/demo/start.server-funcs'
 import { Route as DemoStartApiRequestRouteImport } from './routes/demo/start.api-request'
@@ -22,11 +29,50 @@ import { Route as DemoStartSsrSpaModeRouteImport } from './routes/demo/start.ssr
 import { Route as DemoStartSsrFullSsrRouteImport } from './routes/demo/start.ssr.full-ssr'
 import { Route as DemoStartSsrDataOnlyRouteImport } from './routes/demo/start.ssr.data-only'
 
+const UeberUnsRoute = UeberUnsRouteImport.update({
+  id: '/ueber-uns',
+  path: '/ueber-uns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnerRoute = PartnerRouteImport.update({
+  id: '/partner',
+  path: '/partner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LeistungenWebseitenBrandingRoute =
+  LeistungenWebseitenBrandingRouteImport.update({
+    id: '/leistungen/webseiten-branding',
+    path: '/leistungen/webseiten-branding',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LeistungenSichtbarkeitSteigernRoute =
+  LeistungenSichtbarkeitSteigernRouteImport.update({
+    id: '/leistungen/sichtbarkeit-steigern',
+    path: '/leistungen/sichtbarkeit-steigern',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LeistungenKiAutomatisierungRoute =
+  LeistungenKiAutomatisierungRouteImport.update({
+    id: '/leistungen/ki-automatisierung',
+    path: '/leistungen/ki-automatisierung',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LeistungenDigitaleWerbungRoute =
+  LeistungenDigitaleWerbungRouteImport.update({
+    id: '/leistungen/digitale-werbung',
+    path: '/leistungen/digitale-werbung',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DemoTanstackQueryRoute = DemoTanstackQueryRouteImport.update({
   id: '/demo/tanstack-query',
   path: '/demo/tanstack-query',
@@ -85,7 +131,14 @@ const DemoStartSsrDataOnlyRoute = DemoStartSsrDataOnlyRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
+  '/partner': typeof PartnerRoute
+  '/ueber-uns': typeof UeberUnsRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/leistungen/digitale-werbung': typeof LeistungenDigitaleWerbungRoute
+  '/leistungen/ki-automatisierung': typeof LeistungenKiAutomatisierungRoute
+  '/leistungen/sichtbarkeit-steigern': typeof LeistungenSichtbarkeitSteigernRoute
+  '/leistungen/webseiten-branding': typeof LeistungenWebseitenBrandingRoute
   '/demo/api/names': typeof DemoApiNamesRoute
   '/demo/api/tq-todos': typeof DemoApiTqTodosRoute
   '/demo/form/address': typeof DemoFormAddressRoute
@@ -99,7 +152,14 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
+  '/partner': typeof PartnerRoute
+  '/ueber-uns': typeof UeberUnsRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/leistungen/digitale-werbung': typeof LeistungenDigitaleWerbungRoute
+  '/leistungen/ki-automatisierung': typeof LeistungenKiAutomatisierungRoute
+  '/leistungen/sichtbarkeit-steigern': typeof LeistungenSichtbarkeitSteigernRoute
+  '/leistungen/webseiten-branding': typeof LeistungenWebseitenBrandingRoute
   '/demo/api/names': typeof DemoApiNamesRoute
   '/demo/api/tq-todos': typeof DemoApiTqTodosRoute
   '/demo/form/address': typeof DemoFormAddressRoute
@@ -114,7 +174,14 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
+  '/partner': typeof PartnerRoute
+  '/ueber-uns': typeof UeberUnsRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/leistungen/digitale-werbung': typeof LeistungenDigitaleWerbungRoute
+  '/leistungen/ki-automatisierung': typeof LeistungenKiAutomatisierungRoute
+  '/leistungen/sichtbarkeit-steigern': typeof LeistungenSichtbarkeitSteigernRoute
+  '/leistungen/webseiten-branding': typeof LeistungenWebseitenBrandingRoute
   '/demo/api/names': typeof DemoApiNamesRoute
   '/demo/api/tq-todos': typeof DemoApiTqTodosRoute
   '/demo/form/address': typeof DemoFormAddressRoute
@@ -130,7 +197,14 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/kontakt'
+    | '/partner'
+    | '/ueber-uns'
     | '/demo/tanstack-query'
+    | '/leistungen/digitale-werbung'
+    | '/leistungen/ki-automatisierung'
+    | '/leistungen/sichtbarkeit-steigern'
+    | '/leistungen/webseiten-branding'
     | '/demo/api/names'
     | '/demo/api/tq-todos'
     | '/demo/form/address'
@@ -144,7 +218,14 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/kontakt'
+    | '/partner'
+    | '/ueber-uns'
     | '/demo/tanstack-query'
+    | '/leistungen/digitale-werbung'
+    | '/leistungen/ki-automatisierung'
+    | '/leistungen/sichtbarkeit-steigern'
+    | '/leistungen/webseiten-branding'
     | '/demo/api/names'
     | '/demo/api/tq-todos'
     | '/demo/form/address'
@@ -158,7 +239,14 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/kontakt'
+    | '/partner'
+    | '/ueber-uns'
     | '/demo/tanstack-query'
+    | '/leistungen/digitale-werbung'
+    | '/leistungen/ki-automatisierung'
+    | '/leistungen/sichtbarkeit-steigern'
+    | '/leistungen/webseiten-branding'
     | '/demo/api/names'
     | '/demo/api/tq-todos'
     | '/demo/form/address'
@@ -173,7 +261,14 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KontaktRoute: typeof KontaktRoute
+  PartnerRoute: typeof PartnerRoute
+  UeberUnsRoute: typeof UeberUnsRoute
   DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
+  LeistungenDigitaleWerbungRoute: typeof LeistungenDigitaleWerbungRoute
+  LeistungenKiAutomatisierungRoute: typeof LeistungenKiAutomatisierungRoute
+  LeistungenSichtbarkeitSteigernRoute: typeof LeistungenSichtbarkeitSteigernRoute
+  LeistungenWebseitenBrandingRoute: typeof LeistungenWebseitenBrandingRoute
   DemoApiNamesRoute: typeof DemoApiNamesRoute
   DemoApiTqTodosRoute: typeof DemoApiTqTodosRoute
   DemoFormAddressRoute: typeof DemoFormAddressRoute
@@ -188,11 +283,60 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ueber-uns': {
+      id: '/ueber-uns'
+      path: '/ueber-uns'
+      fullPath: '/ueber-uns'
+      preLoaderRoute: typeof UeberUnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partner': {
+      id: '/partner'
+      path: '/partner'
+      fullPath: '/partner'
+      preLoaderRoute: typeof PartnerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leistungen/webseiten-branding': {
+      id: '/leistungen/webseiten-branding'
+      path: '/leistungen/webseiten-branding'
+      fullPath: '/leistungen/webseiten-branding'
+      preLoaderRoute: typeof LeistungenWebseitenBrandingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leistungen/sichtbarkeit-steigern': {
+      id: '/leistungen/sichtbarkeit-steigern'
+      path: '/leistungen/sichtbarkeit-steigern'
+      fullPath: '/leistungen/sichtbarkeit-steigern'
+      preLoaderRoute: typeof LeistungenSichtbarkeitSteigernRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leistungen/ki-automatisierung': {
+      id: '/leistungen/ki-automatisierung'
+      path: '/leistungen/ki-automatisierung'
+      fullPath: '/leistungen/ki-automatisierung'
+      preLoaderRoute: typeof LeistungenKiAutomatisierungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leistungen/digitale-werbung': {
+      id: '/leistungen/digitale-werbung'
+      path: '/leistungen/digitale-werbung'
+      fullPath: '/leistungen/digitale-werbung'
+      preLoaderRoute: typeof LeistungenDigitaleWerbungRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/demo/tanstack-query': {
@@ -277,7 +421,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KontaktRoute: KontaktRoute,
+  PartnerRoute: PartnerRoute,
+  UeberUnsRoute: UeberUnsRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
+  LeistungenDigitaleWerbungRoute: LeistungenDigitaleWerbungRoute,
+  LeistungenKiAutomatisierungRoute: LeistungenKiAutomatisierungRoute,
+  LeistungenSichtbarkeitSteigernRoute: LeistungenSichtbarkeitSteigernRoute,
+  LeistungenWebseitenBrandingRoute: LeistungenWebseitenBrandingRoute,
   DemoApiNamesRoute: DemoApiNamesRoute,
   DemoApiTqTodosRoute: DemoApiTqTodosRoute,
   DemoFormAddressRoute: DemoFormAddressRoute,
