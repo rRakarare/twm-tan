@@ -1,3 +1,160 @@
 {
-	"hello": "Suchst du nach einfachen Lösungen für Werbung, Marketing und KI?"
+	"meta": {
+		"home": {
+			"title": "TWM -- Digitale Werbung, Sichtbarkeit & KI-Lösungen für KMU",
+			"description": "TWM unterstützt kleine und mittelständische Unternehmen mit digitaler Werbung, Local SEO, Branchenportalen, KI-Automatisierung und modernen Marketingstrategien."
+		},
+		"services": {
+			"title": "Unsere Leistungen -- Digitale Werbung, Local SEO, KI & Webdesign | TWM",
+			"description": "Übersicht aller TWM-Leistungen: Digitale Werbemittel, Branchenportale, Bewertungen, Webdesign, KI-Lösungen und Prozessautomatisierung."
+		},
+		"about": {
+			"title": "Über TWM -- Marketingberatung & Digitalisierung für KMU",
+			"description": "Erfahren Sie mehr über TWM: Marketingexpertise, digitale Lösungen, KI-gestützte Prozesse und ein starkes Partnernetzwerk für nachhaltiges Wachstum."
+		},
+		"partners": {
+			"title": "Partner -- Unsere Experten für Werbung, KI, Design & Digitalisierung",
+			"description": "TWM arbeitet mit starken Partnern wie Advantago, Sternfaenger, P19 und Design-Spezialisten zusammen, um ganzheitliche Lösungen zu bieten."
+		}
+	},
+	"home": {
+		"title": "Hey! Schön, dass du da bist.",
+		"subtitle": "Wir helfen dir dabei, online sichtbarer zu werden und mehr Kunden zu erreichen.",
+		"description": "Einfach erklärt. Ehrlich umgesetzt. Ohne kompliziertes Marketing-Blabla.",
+		"benefits": {
+			"title": "Was du bekommst:",
+			"items": [
+				"mehr Sichtbarkeit",
+				"mehr Anfragen",
+				"moderne Lösungen mit KI",
+				"jemanden, der's für dich regelt"
+			]
+		},
+		"cta": "Lass uns kurz sprechen"
+	},
+	"services": {
+		"visibility": {
+			"title": "Sichtbarkeit steigern",
+			"listing": {
+				"title": "Local Listing & Branchenportale",
+				"description": "Wir sorgen dafür, dass du überall richtig gefunden wirst.",
+				"detail": "Alle Portale -- ein System -- immer aktuell."
+			},
+			"reviews": {
+				"title": "Bewertungsmanagement",
+				"description": "Mehr gute Bewertungen, weniger schlechte.",
+				"detail": "Wir kümmern uns darum, du musst nichts tun."
+			},
+			"analytics": {
+				"title": "Analyse & Insights",
+				"description": "Willst du wissen, wie oft Kunden nach dir suchen?",
+				"detail": "Wir zeigen's dir."
+			}
+		},
+		"advertising": {
+			"title": "Digitale Werbung",
+			"sea": {
+				"title": "SEA & Social Ads",
+				"description": "Wir schalten Werbung, die genau deine Zielkunden erreicht.",
+				"detail": "Einfach und wirksam."
+			},
+			"video": {
+				"title": "Online Video Werbung",
+				"description": "Videos, die ins Auge springen -- überall dort, wo deine Kunden schauen."
+			},
+			"display": {
+				"title": "Display Banner",
+				"description": "Deine Werbung erscheint auf vielen Webseiten -- automatisch und gezielt."
+			},
+			"native": {
+				"title": "Native Ads",
+				"description": "Unauffällige Werbung, die richtig gut funktioniert."
+			},
+			"cube": {
+				"title": "Cube Ads (3D Werbeformate)",
+				"description": "3D-Werbung, die jeder sieht und keiner übersehen kann."
+			},
+			"dooh": {
+				"title": "DOOH & Taxiwerbung",
+				"description": "Werbung draußen im Alltag -- an Orten, wo Menschen unterwegs sind."
+			},
+			"spotify": {
+				"title": "Spotify Ads",
+				"description": "Werbung zum Hören -- perfekt für regionale Kampagnen."
+			},
+			"tv": {
+				"title": "Addressable TV",
+				"description": "TV-Werbung, die genau die richtigen Haushalte erreicht."
+			}
+		},
+		"web": {
+			"title": "Webseiten & Branding",
+			"webdesign": {
+				"title": "Webdesign & Landingpages",
+				"description": "Wir bauen deine Website -- schön, modern und funktional."
+			},
+			"branding": {
+				"title": "Logo & Corporate Design",
+				"description": "Ein Logo und Look, der zu dir passt."
+			}
+		},
+		"ai": {
+			"title": "KI & Automatisierung",
+			"agents": {
+				"title": "KI-Agenten & Automatisierung",
+				"description": "KI übernimmt Aufgaben für dich -- weniger Arbeit, mehr Zeit."
+			},
+			"analytics": {
+				"title": "Datenanalyse & Business Intelligence",
+				"description": "Du bekommst klare Zahlen statt Rätsel.",
+				"detail": "Damit du bessere Entscheidungen triffst."
+			}
+		}
+	},
+	"about": {
+		"title": "Warum mit uns arbeiten?",
+		"intro": "Weil wir's einfach erklären und sauber umsetzen.",
+		"experience": "Wir helfen dir dabei, online sichtbarer zu werden, mehr Kunden zu bekommen und moderne Technik sinnvoll zu nutzen -- ganz ohne Stress.",
+		"strengths": {
+			"title": "Bei uns bekommst du:",
+			"items": [
+				"ehrliche Beratung",
+				"Lösungen, die zu dir passen",
+				"jemanden, der dir alles verständlich erklärt",
+				"ein Team aus Profis, das dir Arbeit abnimmt"
+			]
+		},
+		"goal": {
+			"title": "Ganz einfach:",
+			"text": "Wir kümmern uns. Du profitierst.",
+			"detail": ""
+		}
+	},
+	"partners": {
+		"title": "Wer macht das alles für dich?",
+		"intro": "Wir arbeiten mit Leuten zusammen, die richtig gut in ihrem Job sind:",
+		"list": {
+			"advantago": {
+				"name": "Advantago",
+				"description": "Werbung, Branchenportale & Online-Sichtbarkeit"
+			},
+			"sternfaenger": {
+				"name": "Sternfaenger",
+				"description": "Bewertungen, Kampagnen & KI"
+			},
+			"p19": {
+				"name": "P19",
+				"description": "Automatisierung & smarte Tools"
+			},
+			"kevin": {
+				"name": "Kevin Schmitt",
+				"description": "Logo, Design & Websites"
+			},
+			"freelancer": {
+				"name": "Freelancer-Team",
+				"description": "alles, was man sonst noch braucht"
+			}
+		},
+		"footer": "Du bekommst also ein komplettes Team -- ohne selbst nach Experten suchen zu müssen."
+	}
 }

@@ -1,3 +1,160 @@
 {
-	"hello": "Suchen Sie nach digitalem Marketing, modernen Werbemitteln & KI-Lösungen für Ihr KMU?"
+	"meta": {
+		"home": {
+			"title": "TWM -- Digitale Werbung, Sichtbarkeit & KI-Lösungen für KMU",
+			"description": "TWM unterstützt kleine und mittelständische Unternehmen mit digitaler Werbung, Local SEO, Branchenportalen, KI-Automatisierung und modernen Marketingstrategien."
+		},
+		"services": {
+			"title": "Unsere Leistungen -- Digitale Werbung, Local SEO, KI & Webdesign | TWM",
+			"description": "Übersicht aller TWM-Leistungen: Digitale Werbemittel, Branchenportale, Bewertungen, Webdesign, KI-Lösungen und Prozessautomatisierung."
+		},
+		"about": {
+			"title": "Über TWM -- Marketingberatung & Digitalisierung für KMU",
+			"description": "Erfahren Sie mehr über TWM: Marketingexpertise, digitale Lösungen, KI-gestützte Prozesse und ein starkes Partnernetzwerk für nachhaltiges Wachstum."
+		},
+		"partners": {
+			"title": "Partner -- Unsere Experten für Werbung, KI, Design & Digitalisierung",
+			"description": "TWM arbeitet mit starken Partnern wie Advantago, Sternfaenger, P19 und Design-Spezialisten zusammen, um ganzheitliche Lösungen zu bieten."
+		}
+	},
+	"home": {
+		"title": "Digitales Marketing, moderne Werbemittel & KI-Lösungen für kleine und mittelständische Unternehmen.",
+		"subtitle": "Wir unterstützen Unternehmen dabei, online sichtbar zu werden, mehr Kunden zu erreichen und Prozesse mit KI effizienter zu gestalten.",
+		"description": "Mit starken Partnern, klaren Strategien und einem Netzwerk aus Experten setzen wir Projekte um, die wirklich Wirkung zeigen.",
+		"benefits": {
+			"title": "Ihre Vorteile:",
+			"items": [
+				"messbare Ergebnisse",
+				"transparente Umsetzung",
+				"professionelle Betreuung",
+				"moderne Technologien & KI-Agenten"
+			]
+		},
+		"cta": "Jetzt kostenloses Erstgespräch sichern"
+	},
+	"services": {
+		"visibility": {
+			"title": "Sichtbarkeit steigern",
+			"listing": {
+				"title": "Local Listing & Branchenportale",
+				"description": "Wir tragen Ihr Unternehmen automatisch in über 50+ relevante Branchenportale ein, sorgen für einheitliche Unternehmensdaten (NAP) und verbessern Ihre lokale Sichtbarkeit in Google Maps & Local SEO.",
+				"detail": "Durch zentrale Verwaltung bleiben Ihre Daten überall aktuell."
+			},
+			"reviews": {
+				"title": "Bewertungsmanagement",
+				"description": "Professionelles Reputationsmanagement: Generierung positiver Bewertungen, Vermeidung negativer Rezensionen, Monitoring aller Plattformen und KI-gestützte Antworten.",
+				"detail": "Stärken Sie Ihre lokale Online-Reputation messbar."
+			},
+			"analytics": {
+				"title": "Analyse & Insights",
+				"description": "Transparente Auswertungen über Suchanfragen, Profilaufrufe, Nutzerverhalten und Sichtbarkeit.",
+				"detail": "Erkennen Sie Potenziale und treffen Sie datenbasierte Entscheidungen."
+			}
+		},
+		"advertising": {
+			"title": "Digitale Werbung",
+			"sea": {
+				"title": "SEA & Social Ads",
+				"description": "Gezielte Google Ads & Social Media Kampagnen für Leadgenerierung, Neukundengewinnung und Markenbekanntheit.",
+				"detail": "Effiziente Budgetnutzung und messbare Ergebnisse."
+			},
+			"video": {
+				"title": "Online Video Werbung",
+				"description": "Bewegtbildanzeigen auf YouTube, Social Media & Videoplattformen.",
+				"detail": "Ideal für Branding und hohe Aufmerksamkeit."
+			},
+			"display": {
+				"title": "Display Banner",
+				"description": "Bannerwerbung auf relevanten Websites mit programmatischer Ausspielung für maximale Reichweite und zielgerichtete Platzierung."
+			},
+			"native": {
+				"title": "Native Ads",
+				"description": "In redaktionellen Content eingebettete Werbeanzeigen für hohe Glaubwürdigkeit und starke Klickrate."
+			},
+			"cube": {
+				"title": "Cube Ads (3D Werbeformate)",
+				"description": "Interaktive 3D-Anzeigen mit starker Aufmerksamkeit und hoher Interaktionsrate."
+			},
+			"dooh": {
+				"title": "DOOH & Taxiwerbung",
+				"description": "Digitale Außenwerbung auf Großbildschirmen sowie Taxi-Digitalscreens -- gezielt entlang relevanter Touchpoints."
+			},
+			"spotify": {
+				"title": "Spotify Ads",
+				"description": "Audio-Werbung in Musik, Podcasts und Hörbüchern für moderne Zielgruppenansprache."
+			},
+			"tv": {
+				"title": "Addressable TV",
+				"description": "Personalisierte TV-Werbung basierend auf Haushaltsdaten -- ohne große Streuverluste."
+			}
+		},
+		"web": {
+			"title": "Webseiten & Branding",
+			"webdesign": {
+				"title": "Webdesign & Landingpages",
+				"description": "Moderne Websites, Landingpages, Conversion-optimierte Designs, WordPress & Webflow Entwicklung."
+			},
+			"branding": {
+				"title": "Logo & Corporate Design",
+				"description": "Markenentwicklung, Logoerstellung, Corporate Design, visuelle Identität."
+			}
+		},
+		"ai": {
+			"title": "KI & Automatisierung",
+			"agents": {
+				"title": "KI-Agenten & Automatisierung",
+				"description": "Automatisierte Workflows, KI-basierte Prozessoptimierung, Chatbots, Bewertungs-Automation, interne Effizienzsteigerung."
+			},
+			"analytics": {
+				"title": "Datenanalyse & Business Intelligence",
+				"description": "Datenbasierte Entscheidungsmodelle, Reporting, Business Intelligence, Automatisierung von Auswertungen."
+			}
+		}
+	},
+	"about": {
+		"title": "Über TWM -- Ihr Partner für digitale Sichtbarkeit & moderne Marketinglösungen",
+		"intro": "TWM unterstützt kleine und mittelständische Unternehmen dabei, online sichtbar zu werden, neue Kunden zu erreichen und Prozesse mithilfe von KI effizienter zu gestalten.",
+		"experience": "Mit über 10 Jahren Erfahrung in Marketing, Vertrieb und digitaler Transformation verbinden wir klare Strategien mit einem starken Netzwerk aus spezialisierten Experten.",
+		"strengths": {
+			"title": "Was uns auszeichnet:",
+			"items": [
+				"praxisorientierte Beratung statt theoretischer Modelle",
+				"transparente Umsetzung & klare Kommunikation",
+				"messbare Ergebnisse",
+				"starke Partner in den Bereichen Werbung, KI, Design & Digitalisierung"
+			]
+		},
+		"goal": {
+			"title": "Unser Ziel:",
+			"text": "Marketing muss für KMU verständlich, bezahlbar und effektiv sein.",
+			"detail": "Wir entwickeln Lösungen, die wirklich funktionieren -- ohne kompliziertes Fachwissen vorauszusetzen."
+		}
+	},
+	"partners": {
+		"title": "Unsere Partner -- Ein starkes Netzwerk für starke Ergebnisse",
+		"intro": "Damit wir für Sie die besten Ergebnisse erzielen, arbeiten wir mit ausgewählten Spezialisten zusammen:",
+		"list": {
+			"advantago": {
+				"name": "Advantago",
+				"description": "Experten für digitale Werbung, Local Listings, Branchenportale, programmatische Ausspielung & regionale Kampagnen."
+			},
+			"sternfaenger": {
+				"name": "Sternfaenger",
+				"description": "Spezialisten für Reputationsmanagement, Bewertungsprozesse, Kampagnensteuerung und KI-basierte Automatisierungen."
+			},
+			"p19": {
+				"name": "P19 GmbH",
+				"description": "Technologiepartner für Prozessautomatisierung, KI-Agenten, Datenanalysen und interne digitale Workflows."
+			},
+			"kevin": {
+				"name": "Kevin Schmitt -- Design & Webentwicklung",
+				"description": "Branding, Corporate Design, Webdesign, UI/UX und kreative Konzepte."
+			},
+			"freelancer": {
+				"name": "Freelancer Netzwerk",
+				"description": "Webentwicklung, SEO, Social Media, Content-Produktion, Grafikdesign & technische Umsetzung."
+			}
+		},
+		"footer": "Zusammen bieten wir ein komplettes digitales Leistungspaket für KMU."
+	}
 }
