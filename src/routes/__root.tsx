@@ -7,7 +7,6 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import ToneToggle from "@/components/custom/toneToggle";
 import Navigation from "@/components/navigation";
 import { setSSRLanguage } from "@/lib/i18n";
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
