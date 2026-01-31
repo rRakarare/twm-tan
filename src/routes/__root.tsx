@@ -52,7 +52,7 @@ function RootDocument() {
 			</head>
 			<body>
 				<Navigation />
-				<div className="pt-20">
+				<div className="">
 					<Outlet />
 				</div>
 				<TanStackDevtools
