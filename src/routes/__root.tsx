@@ -46,7 +46,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 
 function RootDocument() {
 	return (
-		<html lang="de">
+		<html lang="de" className="dark">
 			<head>
 				<HeadContent />
 			</head>

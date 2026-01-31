@@ -15,6 +15,10 @@
 		"partners": {
 			"title": "Partner -- Unsere Experten für Werbung, KI, Design & Digitalisierung",
 			"description": "TWM arbeitet mit starken Partnern wie Advantago, Sternfaenger, P19 und Design-Spezialisten zusammen, um ganzheitliche Lösungen zu bieten."
+		},
+		"kontakt": {
+			"title": "Kontakt -- Lass uns quatschen | TWM",
+			"description": "Schnapp dir einen Termin und wir schauen zusammen, wie wir dir helfen können. Ganz entspannt, kein Stress."
 		}
 	},
 	"home": {
@@ -156,5 +160,10 @@
 			}
 		},
 		"footer": "Du bekommst also ein komplettes Team -- ohne selbst nach Experten suchen zu müssen."
+	},
+	"kontakt": {
+		"title": "Lass uns sprechen",
+		"description": "Such dir einfach einen Termin aus, der dir passt. Wir schauen uns an, wo du gerade stehst und was wir für dich tun können.",
+		"subtitle": "Kein Stress, nur ein gutes Gespräch"
 	}
 }

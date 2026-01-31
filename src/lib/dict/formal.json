@@ -15,6 +15,10 @@
 		"partners": {
 			"title": "Partner -- Unsere Experten für Werbung, KI, Design & Digitalisierung",
 			"description": "TWM arbeitet mit starken Partnern wie Advantago, Sternfaenger, P19 und Design-Spezialisten zusammen, um ganzheitliche Lösungen zu bieten."
+		},
+		"kontakt": {
+			"title": "Kontakt -- Termin vereinbaren | TWM",
+			"description": "Vereinbaren Sie ein kostenloses Erstgespräch mit TWM. Wir besprechen Ihre digitale Sichtbarkeit, Marketingziele und passende Lösungen."
 		}
 	},
 	"home": {
@@ -156,5 +160,10 @@
 			}
 		},
 		"footer": "Zusammen bieten wir ein komplettes digitales Leistungspaket für KMU."
+	},
+	"kontakt": {
+		"title": "Termin vereinbaren",
+		"description": "Buchen Sie direkt einen Termin für ein kostenloses Erstgespräch. Wir analysieren Ihre aktuelle Situation und entwickeln gemeinsam eine Strategie für mehr Sichtbarkeit und Erfolg.",
+		"subtitle": "Ihr erster Schritt zu mehr digitaler Sichtbarkeit"
 	}
 }

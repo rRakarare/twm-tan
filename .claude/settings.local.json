@@ -1,6 +1,13 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(node -p \"const styles = require\\(''C:/Users/rRene/Coding/twm-tan/src/styles.css''\\); console.log\\(''oklch values extracted''\\)\")",
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "shadcn"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }

@@ -17,8 +17,6 @@ import { Route as LeistungenWebseitenBrandingRouteImport } from './routes/leistu
 import { Route as LeistungenSichtbarkeitSteigernRouteImport } from './routes/leistungen/sichtbarkeit-steigern'
 import { Route as LeistungenKiAutomatisierungRouteImport } from './routes/leistungen/ki-automatisierung'
 import { Route as LeistungenDigitaleWerbungRouteImport } from './routes/leistungen/digitale-werbung'
-import { Route as DemoFormSimpleRouteImport } from './routes/demo/form.simple'
-import { Route as DemoFormAddressRouteImport } from './routes/demo/form.address'
 
 const UeberUnsRoute = UeberUnsRouteImport.update({
   id: '/ueber-uns',
@@ -64,16 +62,6 @@ const LeistungenDigitaleWerbungRoute =
     path: '/leistungen/digitale-werbung',
     getParentRoute: () => rootRouteImport,
   } as any)
-const DemoFormSimpleRoute = DemoFormSimpleRouteImport.update({
-  id: '/demo/form/simple',
-  path: '/demo/form/simple',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoFormAddressRoute = DemoFormAddressRouteImport.update({
-  id: '/demo/form/address',
-  path: '/demo/form/address',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -84,8 +72,6 @@ export interface FileRoutesByFullPath {
   '/leistungen/ki-automatisierung': typeof LeistungenKiAutomatisierungRoute
   '/leistungen/sichtbarkeit-steigern': typeof LeistungenSichtbarkeitSteigernRoute
   '/leistungen/webseiten-branding': typeof LeistungenWebseitenBrandingRoute
-  '/demo/form/address': typeof DemoFormAddressRoute
-  '/demo/form/simple': typeof DemoFormSimpleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -96,8 +82,6 @@ export interface FileRoutesByTo {
   '/leistungen/ki-automatisierung': typeof LeistungenKiAutomatisierungRoute
   '/leistungen/sichtbarkeit-steigern': typeof LeistungenSichtbarkeitSteigernRoute
   '/leistungen/webseiten-branding': typeof LeistungenWebseitenBrandingRoute
-  '/demo/form/address': typeof DemoFormAddressRoute
-  '/demo/form/simple': typeof DemoFormSimpleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -109,8 +93,6 @@ export interface FileRoutesById {
   '/leistungen/ki-automatisierung': typeof LeistungenKiAutomatisierungRoute
   '/leistungen/sichtbarkeit-steigern': typeof LeistungenSichtbarkeitSteigernRoute
   '/leistungen/webseiten-branding': typeof LeistungenWebseitenBrandingRoute
-  '/demo/form/address': typeof DemoFormAddressRoute
-  '/demo/form/simple': typeof DemoFormSimpleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -123,8 +105,6 @@ export interface FileRouteTypes {
     | '/leistungen/ki-automatisierung'
     | '/leistungen/sichtbarkeit-steigern'
     | '/leistungen/webseiten-branding'
-    | '/demo/form/address'
-    | '/demo/form/simple'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -135,8 +115,6 @@ export interface FileRouteTypes {
     | '/leistungen/ki-automatisierung'
     | '/leistungen/sichtbarkeit-steigern'
     | '/leistungen/webseiten-branding'
-    | '/demo/form/address'
-    | '/demo/form/simple'
   id:
     | '__root__'
     | '/'
@@ -147,8 +125,6 @@ export interface FileRouteTypes {
     | '/leistungen/ki-automatisierung'
     | '/leistungen/sichtbarkeit-steigern'
     | '/leistungen/webseiten-branding'
-    | '/demo/form/address'
-    | '/demo/form/simple'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -160,8 +136,6 @@ export interface RootRouteChildren {
   LeistungenKiAutomatisierungRoute: typeof LeistungenKiAutomatisierungRoute
   LeistungenSichtbarkeitSteigernRoute: typeof LeistungenSichtbarkeitSteigernRoute
   LeistungenWebseitenBrandingRoute: typeof LeistungenWebseitenBrandingRoute
-  DemoFormAddressRoute: typeof DemoFormAddressRoute
-  DemoFormSimpleRoute: typeof DemoFormSimpleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -222,20 +196,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LeistungenDigitaleWerbungRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/demo/form/simple': {
-      id: '/demo/form/simple'
-      path: '/demo/form/simple'
-      fullPath: '/demo/form/simple'
-      preLoaderRoute: typeof DemoFormSimpleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/form/address': {
-      id: '/demo/form/address'
-      path: '/demo/form/address'
-      fullPath: '/demo/form/address'
-      preLoaderRoute: typeof DemoFormAddressRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -248,8 +208,6 @@ const rootRouteChildren: RootRouteChildren = {
   LeistungenKiAutomatisierungRoute: LeistungenKiAutomatisierungRoute,
   LeistungenSichtbarkeitSteigernRoute: LeistungenSichtbarkeitSteigernRoute,
   LeistungenWebseitenBrandingRoute: LeistungenWebseitenBrandingRoute,
-  DemoFormAddressRoute: DemoFormAddressRoute,
-  DemoFormSimpleRoute: DemoFormSimpleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
