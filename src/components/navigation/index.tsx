@@ -100,7 +100,7 @@ function Navigation() {
 													delay: index * 0.08,
 												}}
 											>
-												<div className="p-4 rounded-md bg-accent/50 hover:bg-accent transition-colors">
+												<div className="p-4 rounded-md bg-foreground/5 border hover:bg-primary/40 transition-colors">
 													{/* Header with icon and title */}
 													<Link
 														to={service.href}
