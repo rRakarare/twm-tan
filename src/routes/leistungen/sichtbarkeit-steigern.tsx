@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import { MapPin, Star, BarChart3 } from "lucide-react";
 import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
+	SectionImageLeft,
+	SectionImageRight,
+	SectionCentered,
+} from "@/components/sections";
+import { IconPlaceholder } from "@/components/ui/icon-placeholder";
 
 export const Route = createFileRoute("/leistungen/sichtbarkeit-steigern")({
 	component: SichtbarkeitSteigern,
@@ -14,12 +14,12 @@ export const Route = createFileRoute("/leistungen/sichtbarkeit-steigern")({
 		meta: [
 			{
 				title:
-					"Unsere Leistungen -- Digitale Werbung, Local SEO, KI & Webdesign | TWM",
+					"Sichtbarkeit steigern -- Local SEO, Bewertungen & Analytics | TWM",
 			},
 			{
 				name: "description",
 				content:
-					"Übersicht aller TWM-Leistungen: Digitale Werbemittel, Branchenportale, Bewertungen, Webdesign, KI-Lösungen und Prozessautomatisierung.",
+					"Steigern Sie Ihre lokale Sichtbarkeit mit Local Listing, professionellem Bewertungsmanagement und datenbasierten Insights.",
 			},
 		],
 	}),
@@ -29,54 +29,66 @@ function SichtbarkeitSteigern() {
 	const { t } = useTranslation();
 
 	return (
-		<div className="container mx-auto px-4 py-16 max-w-6xl">
-			<h1 className="text-4xl font-bold mb-8">
-				{t("services.visibility.title")}
-			</h1>
-
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.visibility.listing.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base mb-2">
-							{t("services.visibility.listing.description")}
-						</CardDescription>
-						<p className="text-sm text-muted-foreground">
-							{t("services.visibility.listing.detail")}
-						</p>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.visibility.reviews.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base mb-2">
-							{t("services.visibility.reviews.description")}
-						</CardDescription>
-						<p className="text-sm text-muted-foreground">
-							{t("services.visibility.reviews.detail")}
-						</p>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.visibility.analytics.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base mb-2">
-							{t("services.visibility.analytics.description")}
-						</CardDescription>
-						<p className="text-sm text-muted-foreground">
-							{t("services.visibility.analytics.detail")}
-						</p>
-					</CardContent>
-				</Card>
+		<div>
+			<div className="container py-16">
+				<h1 className="text-4xl font-bold mb-4">
+					{t("services.visibility.title")}
+				</h1>
+				<p className="text-lg text-muted-foreground mb-12">
+					Werden Sie online gefunden und stärken Sie Ihre lokale Präsenz.
+				</p>
 			</div>
+
+			<section id="listing" className="scroll-mt-24">
+				<SectionImageLeft
+					image={<IconPlaceholder icon={MapPin} gradientIndex={0} />}
+					heading={t("services.visibility.listing.title")}
+					text={
+						<>
+							<p className="mb-4">
+								{t("services.visibility.listing.description")}
+							</p>
+							<p className="text-muted-foreground">
+								{t("services.visibility.listing.detail")}
+							</p>
+						</>
+					}
+				/>
+			</section>
+
+			<section id="reviews" className="scroll-mt-24">
+				<SectionImageRight
+					image={<IconPlaceholder icon={Star} gradientIndex={1} />}
+					heading={t("services.visibility.reviews.title")}
+					text={
+						<>
+							<p className="mb-4">
+								{t("services.visibility.reviews.description")}
+							</p>
+							<p className="text-muted-foreground">
+								{t("services.visibility.reviews.detail")}
+							</p>
+						</>
+					}
+				/>
+			</section>
+
+			<section id="analytics" className="scroll-mt-24">
+				<SectionCentered
+					image={<IconPlaceholder icon={BarChart3} gradientIndex={2} />}
+					heading={t("services.visibility.analytics.title")}
+					text={
+						<>
+							<p className="mb-4">
+								{t("services.visibility.analytics.description")}
+							</p>
+							<p className="text-muted-foreground">
+								{t("services.visibility.analytics.detail")}
+							</p>
+						</>
+					}
+				/>
+			</section>
 		</div>
 	);
 }

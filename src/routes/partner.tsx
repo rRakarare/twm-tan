@@ -37,7 +37,7 @@ function Partner() {
 	] as const;
 
 	return (
-		<div className="container mx-auto px-4 py-16 max-w-6xl">
+		<div className="container py-16">
 			<h1 className="text-4xl font-bold mb-6">{t("partners.title")}</h1>
 			<p className="text-xl mb-8">{t("partners.intro")}</p>
 

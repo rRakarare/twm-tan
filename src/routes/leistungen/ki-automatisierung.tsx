@@ -1,12 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
+import { Bot, BarChart3 } from "lucide-react";
+import { SectionImageLeft, SectionImageRight } from "@/components/sections";
+import { IconPlaceholder } from "@/components/ui/icon-placeholder";
 
 export const Route = createFileRoute("/leistungen/ki-automatisierung")({
 	component: KIAutomatisierung,
@@ -14,12 +10,12 @@ export const Route = createFileRoute("/leistungen/ki-automatisierung")({
 		meta: [
 			{
 				title:
-					"Unsere Leistungen -- Digitale Werbung, Local SEO, KI & Webdesign | TWM",
+					"KI & Automatisierung -- Chatbots, Workflows & Datenanalyse | TWM",
 			},
 			{
 				name: "description",
 				content:
-					"Übersicht aller TWM-Leistungen: Digitale Werbemittel, Branchenportale, Bewertungen, Webdesign, KI-Lösungen und Prozessautomatisierung.",
+					"KI-gestützte Automatisierung: Chatbots, Workflows, Prozessoptimierung und datenbasierte Business Intelligence für Ihr Unternehmen.",
 			},
 		],
 	}),
@@ -29,35 +25,29 @@ function KIAutomatisierung() {
 	const { t } = useTranslation();
 
 	return (
-		<div className="container mx-auto px-4 py-16 max-w-6xl">
-			<h1 className="text-4xl font-bold mb-8">{t("services.ai.title")}</h1>
-
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.ai.agents.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base">
-							{t("services.ai.agents.description")}
-						</CardDescription>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.ai.analytics.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base mb-2">
-							{t("services.ai.analytics.description")}
-						</CardDescription>
-						<p className="text-sm text-muted-foreground">
-							{t("services.ai.analytics.detail")}
-						</p>
-					</CardContent>
-				</Card>
+		<div>
+			<div className="container py-16">
+				<h1 className="text-4xl font-bold mb-4">{t("services.ai.title")}</h1>
+				<p className="text-lg text-muted-foreground mb-12">
+					Optimieren Sie Ihre Prozesse mit künstlicher Intelligenz.
+				</p>
 			</div>
+
+			<section id="agents" className="scroll-mt-24">
+				<SectionImageLeft
+					image={<IconPlaceholder icon={Bot} gradientIndex={5} />}
+					heading={t("services.ai.agents.title")}
+					text={<p>{t("services.ai.agents.description")}</p>}
+				/>
+			</section>
+
+			<section id="analytics" className="scroll-mt-24">
+				<SectionImageRight
+					image={<IconPlaceholder icon={BarChart3} gradientIndex={4} />}
+					heading={t("services.ai.analytics.title")}
+					text={<p>{t("services.ai.analytics.description")}</p>}
+				/>
+			</section>
 		</div>
 	);
 }

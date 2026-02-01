@@ -179,6 +179,10 @@ code {
   --shadow-2xl: var(--shadow-2xl);
 }
 
+@utility container {
+  @apply mx-auto px-4 max-w-6xl;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

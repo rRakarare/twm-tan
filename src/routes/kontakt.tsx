@@ -22,7 +22,7 @@ function Kontakt() {
 	const { t } = useTranslation();
 
 	return (
-		<div className="container mx-auto px-4 py-16 max-w-4xl">
+		<div className="container py-16">
 			{/* Header with translated content */}
 			<div className="mb-8 text-center">
 				<h1 className="text-4xl font-bold mb-4">{t("kontakt.title")}</h1>

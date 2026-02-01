@@ -52,9 +52,9 @@ function RootDocument() {
 			</head>
 			<body>
 				<Navigation />
-				<div className="">
+				<main className="pt-28">
 					<Outlet />
-				</div>
+				</main>
 				<TanStackDevtools
 					config={{
 						position: "bottom-right",

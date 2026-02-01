@@ -1,25 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import { Megaphone, Video, LayoutGrid, Monitor, Music, Tv } from "lucide-react";
 import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
+	SectionImageLeft,
+	SectionImageRight,
+	SectionCentered,
+} from "@/components/sections";
+import { IconPlaceholder } from "@/components/ui/icon-placeholder";
 
 export const Route = createFileRoute("/leistungen/digitale-werbung")({
 	component: DigitaleWerbung,
 	head: () => ({
 		meta: [
 			{
-				title:
-					"Unsere Leistungen -- Digitale Werbung, Local SEO, KI & Webdesign | TWM",
+				title: "Digitale Werbung -- Google Ads, Video, Display & mehr | TWM",
 			},
 			{
 				name: "description",
 				content:
-					"Übersicht aller TWM-Leistungen: Digitale Werbemittel, Branchenportale, Bewertungen, Webdesign, KI-Lösungen und Prozessautomatisierung.",
+					"Digitale Werbelösungen: SEA, Social Ads, Video Werbung, Display Banner, DOOH, Spotify Ads und Addressable TV für maximale Reichweite.",
 			},
 		],
 	}),
@@ -29,106 +28,81 @@ function DigitaleWerbung() {
 	const { t } = useTranslation();
 
 	return (
-		<div className="container mx-auto px-4 py-16 max-w-6xl">
-			<h1 className="text-4xl font-bold mb-8">
-				{t("services.advertising.title")}
-			</h1>
-
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.advertising.sea.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base mb-2">
-							{t("services.advertising.sea.description")}
-						</CardDescription>
-						<p className="text-sm text-muted-foreground">
-							{t("services.advertising.sea.detail")}
-						</p>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.advertising.video.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base mb-2">
-							{t("services.advertising.video.description")}
-						</CardDescription>
-						<p className="text-sm text-muted-foreground">
-							{t("services.advertising.video.detail")}
-						</p>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.advertising.display.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base">
-							{t("services.advertising.display.description")}
-						</CardDescription>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.advertising.native.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base">
-							{t("services.advertising.native.description")}
-						</CardDescription>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.advertising.cube.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base">
-							{t("services.advertising.cube.description")}
-						</CardDescription>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.advertising.dooh.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base">
-							{t("services.advertising.dooh.description")}
-						</CardDescription>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.advertising.spotify.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base">
-							{t("services.advertising.spotify.description")}
-						</CardDescription>
-					</CardContent>
-				</Card>
-
-				<Card>
-					<CardHeader>
-						<CardTitle>{t("services.advertising.tv.title")}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<CardDescription className="text-base">
-							{t("services.advertising.tv.description")}
-						</CardDescription>
-					</CardContent>
-				</Card>
+		<div>
+			<div className="container py-16">
+				<h1 className="text-4xl font-bold mb-4">
+					{t("services.advertising.title")}
+				</h1>
+				<p className="text-lg text-muted-foreground mb-12">
+					Erreichen Sie Ihre Zielgruppe mit gezielten digitalen Werbekampagnen.
+				</p>
 			</div>
+
+			<section id="sea" className="scroll-mt-24">
+				<SectionImageLeft
+					image={<IconPlaceholder icon={Megaphone} gradientIndex={0} />}
+					heading={t("services.advertising.sea.title")}
+					text={
+						<>
+							<p className="mb-4">
+								{t("services.advertising.sea.description")}
+							</p>
+							<p className="text-muted-foreground">
+								{t("services.advertising.sea.detail")}
+							</p>
+						</>
+					}
+				/>
+			</section>
+
+			<section id="video" className="scroll-mt-24">
+				<SectionImageRight
+					image={<IconPlaceholder icon={Video} gradientIndex={1} />}
+					heading={t("services.advertising.video.title")}
+					text={
+						<>
+							<p className="mb-4">
+								{t("services.advertising.video.description")}
+							</p>
+							<p className="text-muted-foreground">
+								{t("services.advertising.video.detail")}
+							</p>
+						</>
+					}
+				/>
+			</section>
+
+			<section id="display" className="scroll-mt-24">
+				<SectionCentered
+					image={<IconPlaceholder icon={LayoutGrid} gradientIndex={2} />}
+					heading={t("services.advertising.display.title")}
+					text={<p>{t("services.advertising.display.description")}</p>}
+				/>
+			</section>
+
+			<section id="dooh" className="scroll-mt-24">
+				<SectionImageLeft
+					image={<IconPlaceholder icon={Monitor} gradientIndex={3} />}
+					heading={t("services.advertising.dooh.title")}
+					text={<p>{t("services.advertising.dooh.description")}</p>}
+				/>
+			</section>
+
+			<section id="spotify" className="scroll-mt-24">
+				<SectionImageRight
+					image={<IconPlaceholder icon={Music} gradientIndex={4} />}
+					heading={t("services.advertising.spotify.title")}
+					text={<p>{t("services.advertising.spotify.description")}</p>}
+				/>
+			</section>
+
+			<section id="tv" className="scroll-mt-24">
+				<SectionCentered
+					image={<IconPlaceholder icon={Tv} gradientIndex={5} />}
+					heading={t("services.advertising.tv.title")}
+					text={<p>{t("services.advertising.tv.description")}</p>}
+				/>
+			</section>
 		</div>
 	);
 }

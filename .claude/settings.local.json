@@ -12,7 +12,8 @@
       "Bash(npx biome check:*)",
       "Bash(npm run format:*)",
       "Bash(npx biome format:*)",
-      "Bash(timeout 15 npm run dev:*)"
+      "Bash(timeout 15 npm run dev:*)",
+      "Bash(.ts$ \")"
     ]
   },
   "enableAllProjectMcpServers": true,

@@ -2,10 +2,12 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 interface SectionProps {
-	image: {
-		src: string;
-		alt: string;
-	};
+	image?:
+		| {
+				src: string;
+				alt: string;
+		  }
+		| React.ReactNode;
 	heading: string;
 	subtitle?: string;
 	text: string | React.ReactNode;
@@ -53,14 +55,21 @@ export function SectionCentered({
 			variants={containerVariants}
 			className={cn("py-16 md:py-24", className)}
 		>
-			<div className="container mx-auto px-4">
+			<div className="container">
 				<div className="flex flex-col items-center text-center max-w-3xl mx-auto">
 					<motion.div variants={imageVariants} className="mb-8">
-						<img
-							src={image.src}
-							alt={image.alt}
-							className="rounded-lg object-cover shadow-lg max-w-md w-full"
-						/>
+						{image &&
+						typeof image === "object" &&
+						"src" in image &&
+						"alt" in image ? (
+							<img
+								src={image.src}
+								alt={image.alt}
+								className="rounded-lg object-cover shadow-lg max-w-md w-full"
+							/>
+						) : (
+							image
+						)}
 					</motion.div>
 
 					<motion.h2

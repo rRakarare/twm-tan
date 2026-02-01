@@ -6,7 +6,7 @@ function Hero() {
 	const [showSlogan, setShowSlogan] = useState(false);
 
 	return (
-		<section className="h-screen w-full flex flex-col items-center justify-center">
+		<section className="-mt-28 h-screen w-full flex flex-col items-center justify-center">
 			<TWMIconAnimated
 				className="size-32 md:size-48"
 				onAnimationComplete={() => setShowSlogan(true)}

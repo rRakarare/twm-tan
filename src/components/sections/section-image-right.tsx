@@ -2,10 +2,12 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 interface SectionProps {
-	image: {
-		src: string;
-		alt: string;
-	};
+	image?:
+		| {
+				src: string;
+				alt: string;
+		  }
+		| React.ReactNode;
 	heading: string;
 	subtitle?: string;
 	text: string | React.ReactNode;
@@ -53,7 +55,7 @@ export function SectionImageRight({
 			variants={containerVariants}
 			className={cn("py-16 md:py-24", className)}
 		>
-			<div className="container mx-auto px-4">
+			<div className="container">
 				<div className="grid grid-cols-1 md:grid-cols-[1fr_30%] gap-8 md:gap-12 items-center">
 					<div className="space-y-4 order-2 md:order-1">
 						<motion.h2
@@ -81,11 +83,18 @@ export function SectionImageRight({
 					</div>
 
 					<motion.div variants={imageVariants} className="order-1 md:order-2">
-						<img
-							src={image.src}
-							alt={image.alt}
-							className="w-full rounded-lg object-cover shadow-lg"
-						/>
+						{image &&
+						typeof image === "object" &&
+						"src" in image &&
+						"alt" in image ? (
+							<img
+								src={image.src}
+								alt={image.alt}
+								className="w-full rounded-lg object-cover shadow-lg"
+							/>
+						) : (
+							image
+						)}
 					</motion.div>
 				</div>
 			</div>

@@ -93,21 +93,17 @@ function MobileNav() {
 	};
 
 	return (
-		<div className="md:hidden fixed w-full top-0 z-50">
-			{/* Mobile Header */}
-			<div className="flex items-center justify-between p-4 bg-background border-b">
+		<div className="md:hidden fixed top-0 left-0 z-50">
+			{/* Mobile Header - Single burger button */}
+			<div className="p-4">
 				<button
 					type="button"
 					onClick={() => setIsOpen(true)}
-					className="p-2 hover:bg-accent rounded-md transition-colors"
+					className="p-2 border border-border rounded-md bg-background hover:bg-accent transition-colors"
 					aria-label="Open menu"
 				>
 					<Menu className="size-6" />
 				</button>
-
-				<Link to="/" onClick={closeDrawer}>
-					<TWMIcon className="fill-primary size-8" />
-				</Link>
 			</div>
 
 			{/* Drawer Overlay & Content */}
@@ -130,7 +126,7 @@ function MobileNav() {
 							initial="hidden"
 							animate="visible"
 							exit="exit"
-							className="fixed top-0 left-0 h-full w-[280px] bg-background z-50 shadow-xl"
+							className="fixed top-0 left-0 h-full w-full bg-background z-50 shadow-xl"
 						>
 							{/* Drawer Header */}
 							<div className="flex items-center justify-between p-4 border-b">

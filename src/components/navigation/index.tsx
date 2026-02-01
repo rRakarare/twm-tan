@@ -41,7 +41,7 @@ function Navigation() {
 			<div className="hidden md:block fixed w-full top-5 z-50">
 				<div
 					onMouseLeave={() => setIsLeistungenOpen(false)}
-					className="border p-4 rounded-md mx-auto max-w-4xl bg-background"
+					className="border p-4 rounded-md mx-auto max-w-6xl bg-background"
 				>
 					<div className="flex items-center justify-between">
 						<Link to="/" onMouseEnter={() => setIsLeistungenOpen(false)}>
@@ -99,34 +99,39 @@ function Navigation() {
 												transition={{
 													delay: index * 0.08,
 												}}
+												className="h-full"
 											>
-												<div className="p-4 rounded-md bg-foreground/5 border hover:bg-primary/40 transition-colors">
+												<Link
+													to={service.href}
+													onClick={() => setIsLeistungenOpen(false)}
+													className="block h-full p-4 rounded-md bg-foreground/5 border hover:bg-primary/40 transition-colors"
+												>
 													{/* Header with icon and title */}
-													<Link
-														to={service.href}
-														onClick={() => setIsLeistungenOpen(false)}
-														className="flex items-center gap-2 mb-3 group"
-													>
+													<div className="flex items-center gap-2 mb-3">
 														<Icon className="size-5 text-primary" />
-														<span className="text-sm font-medium group-hover:text-primary transition-colors">
+														<span className="text-sm font-medium">
 															{service.title}
 														</span>
-													</Link>
+													</div>
 
 													{/* Sublinks grid */}
 													<div className="grid grid-cols-2 gap-x-4 gap-y-1">
 														{service.sublinks.map((sublink) => (
-															<a
+															<Link
 																key={sublink.anchor}
-																href={`${service.href}#${sublink.anchor}`}
-																onClick={() => setIsLeistungenOpen(false)}
+																to={service.href}
+																hash={sublink.anchor}
+																onClick={(e) => {
+																	e.stopPropagation();
+																	setIsLeistungenOpen(false);
+																}}
 																className="text-xs text-muted-foreground hover:text-primary hover:underline transition-colors truncate"
 															>
 																{sublink.label}
-															</a>
+															</Link>
 														))}
 													</div>
-												</div>
+												</Link>
 											</motion.div>
 										);
 									})}

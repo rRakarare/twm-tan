@@ -21,7 +21,7 @@ function UeberUns() {
 	const { t } = useTranslation();
 
 	return (
-		<div className="container mx-auto px-4 py-16 max-w-4xl">
+		<div className="container py-16">
 			<h1 className="text-4xl font-bold mb-6">{t("about.title")}</h1>
 			<p className="text-xl mb-4">{t("about.intro")}</p>
 			<p className="text-lg mb-8">{t("about.experience")}</p>
