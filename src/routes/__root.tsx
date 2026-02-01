@@ -7,6 +7,7 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import Footer from "@/components/footer";
 import Navigation from "@/components/navigation";
 import { setSSRLanguage } from "@/lib/i18n";
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
@@ -50,11 +51,12 @@ function RootDocument() {
 			<head>
 				<HeadContent />
 			</head>
-			<body>
+			<body className="min-h-screen flex flex-col">
 				<Navigation />
-				<main className="pt-28">
+				<main className="pt-28 flex-1">
 					<Outlet />
 				</main>
+				<Footer />
 				<TanStackDevtools
 					config={{
 						position: "bottom-right",

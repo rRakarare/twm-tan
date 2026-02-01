@@ -26,8 +26,7 @@
 		"rules": {
 			"recommended": true,
 			"a11y": {
-				"noStaticElementInteractions": "off",
-				"noIdAttribute": "off"
+				"noStaticElementInteractions": "off"
 			}
 		}
 	},

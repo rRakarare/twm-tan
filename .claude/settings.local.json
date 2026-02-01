@@ -13,7 +13,12 @@
       "Bash(npm run format:*)",
       "Bash(npx biome format:*)",
       "Bash(timeout 15 npm run dev:*)",
-      "Bash(.ts$ \")"
+      "Bash(.ts$ \")",
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
